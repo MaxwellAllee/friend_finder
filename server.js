@@ -4,10 +4,11 @@ var path = require("path");
 //var htmlRoutes= require("./app/routing/htmlRoutes")
 var app = express();
 var PORT = process.env.PORT || 3000;
+var photoSend
 var friendsList = [
     {
         "name": "Nicole",
-        "photo": "nicolePhoto.jpeg",
+        "photo": "http://worldartsme.com/images/mario-brothers-princess-clipart-1.jpg",
         "scores": [
             "2",
             "2",
@@ -23,7 +24,7 @@ var friendsList = [
     },
     {
         "name": "Parker",
-        "photo": "parkerPhoto.jpeg",
+        "photo": "https://mbtskoudsalg.com/images/luigi-face-png-4.png",
         "scores": [
             "3",
             "2",
@@ -53,30 +54,30 @@ app.get("/", function (req, res) {
 app.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname, "app/public/survey.html"));
 });
-app.get("/api/friends", function (req, res) {
-    return res.json(friendsList);
-});
+//  app.get("/api/friends", function (req, res) {
+//      return res.json(friendsList);
+//  });
 app.post("/api/friends", function (req, res) {
     var newFriends = req.body;
-    var matchScore = ""
-    var matchnum = ""
-    var matchIt
-
+ 
     res.json(newFriends);
 
     var result = match(newFriends)
-    console.log("results: ", friendsList[result].name, friendsList[result].photo)
-    friendsList.push(newFriends);
-    
+    photoSend = friendsList[result]
 
 });
+app.get("/api/push/", function (req, res) {
+    console.log(photoSend)
+    return res.json(photoSend)
 
+});
 
 //   module.exports = htmlRouter()
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
 function match(pass) {
+    console.log("yo")
     var matchScore 
     var bestMatch = 50
     var bestMatchNum 
