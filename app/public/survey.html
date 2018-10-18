@@ -11,85 +11,42 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <style>
+        .bimage {
+                    background-image: url("https://gdurl.com/1WXJ/photo1.jpg");
+                    background-position: center; 
+                    background-repeat: no-repeat; 
+                    background-size: auto, 100%;
+                }
+                
+        hr {
+            height: 5px;
+           color:  #ccc;
+        }
+    </style>
 </head>
 
 <body class="text-light bg-primary">
-    <h1 class="text-center">Survey Questions</h1>
+    <div class = "p-3 text-center">
+    <h1>Survey Questions</h1></div>
+    <div class="bimage p-3">
+        <div class="container bg-primary mt-3">
+            <div class="row">
+                <div class="col-sm">
+                    <h2>About You</h2>
+                    <h4>Name (Required)<br>
+                        <input type="text" class="mb-2" id="name" value="name">
+                        <br>
+                        Link to Photo Image (Required)<br>
+                        <input type="text" class=" w-50" id="photo" value="photo">
+                        <br>
+                        <hr>
+                        <H2> Question 1 </H2>
+                        Your mind is always buzzing with unexplored ideas and plans.
+                        <br>
+                        <div class="dropdown w-25 p-3">
 
-    <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h2>About You</h2>
-                <h4>Name (Required)<br>
-                    <input type="text" id="name" value="name">
-                    <br>
-                    Link to Photo Image (Required)<br>
-                    <input type="text" id="photo" value="photo">
-                    <br>
-                    <hr>
-                    <H2> Question 1 </H2>
-                    Your mind is always buzzing with unexplored ideas and plans.
-                    <br>
-                    <div class="dropdown w-25 p-3">
-
-                        <select class="custom-select" id="inputGroup01">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
-                    <H2> Question 2 </H2>
-                    Generally speaking, you rely more on your experience than your imagination.
-                    <br>
-                    <div class="dropdown w-25 p-3">
-
-                        <select class="custom-select" id="inputGroup02">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
-                    <H2> Question 3 </H2>
-                    You find it easy to stay relaxed and focused even when there is some pressure..
-                    <br>
-                    <div class="dropdown w-25 p-3 ">
-
-                        <select class="custom-select" id="inputGroup03">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
-                    <H2> Question 4 </H2>
-                    You rarely do something just out of sheer curiosity.
-                    <div class="dropdown w-25 p-3 ">
-
-                        <select class="custom-select" id="inputGroup04">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
-                    <H2> Question 5 </H2>
-                    People can rarely upset you.
-                    <div class="dropdown w-25 p-3">
-                        <div class="dropdown">
-
-                            <select class="custom-select" id="inputGroup05">
+                            <select class="custom-select" id="inputGroup01">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -98,100 +55,153 @@
                                 <option value="5">Five (Strongly Disagree)</option>
                             </select>
                         </div>
-                    </div>
-                    <H2> Question 6 </H2>
-                    It is often difficult for you to relate to other people’s feelings.
-                    <div class="dropdown w-25 p-3">
+                        <H2> Question 2 </H2>
+                        Generally speaking, you rely more on your experience than your imagination.
+                        <br>
+                        <div class="dropdown w-25 p-3">
 
-                        <select class="custom-select" id="inputGroup06">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
+                            <select class="custom-select" id="inputGroup02">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+                            </select>
+                        </div>
+                        <H2> Question 3 </H2>
+                        You find it easy to stay relaxed and focused even when there is some pressure..
+                        <br>
+                        <div class="dropdown w-25 p-3 ">
 
-                    <H2> Question 7 </H2>
-                    In a discussion, truth should be more important than people’s sensitivities.
-                    <div class="dropdown w-25 p-3">
+                            <select class="custom-select" id="inputGroup03">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+                            </select>
+                        </div>
+                        <H2> Question 4 </H2>
+                        You rarely do something just out of sheer curiosity.
+                        <div class="dropdown w-25 p-3 ">
 
-                        <select class="custom-select" id="inputGroup07">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
+                            <select class="custom-select" id="inputGroup04">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+                            </select>
+                        </div>
+                        <H2> Question 5 </H2>
+                        People can rarely upset you.
+                        <div class="dropdown w-25 p-3">
+                            <div class="dropdown">
 
-                    <H2> Question 8 </H2>
-                    You rarely get carried away by fantasies and ideas.
-                    <div class="dropdown w-25 p-3">
+                                <select class="custom-select" id="inputGroup05">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One (Strongly Disagree)</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                    <option value="4">Four</option>
+                                    <option value="5">Five (Strongly Disagree)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <H2> Question 6 </H2>
+                        It is often difficult for you to relate to other people’s feelings.
+                        <div class="dropdown w-25 p-3">
 
-                        <select class="custom-select" id="inputGroup08">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
+                            <select class="custom-select" id="inputGroup06">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+                            </select>
+                        </div>
 
-                    <H2> Question 9 </H2>
-                    You think that everyone’s views should be respected regardless of whether they are supported by
-                    facts or not.
-                    <div class="dropdown w-25 p-3">
+                        <H2> Question 7 </H2>
+                        In a discussion, truth should be more important than people’s sensitivities.
+                        <div class="dropdown w-25 p-3">
 
-                        <select class="custom-select" id="inputGroup09">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
-                        </select>
-                    </div>
+                            <select class="custom-select" id="inputGroup07">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+                            </select>
+                        </div>
 
-                    <H2> Question 10 </H2>
-                    You feel more energetic after spending time with a group of people.
-                    <div class="dropdown w-25 p-3">
-                        <select class="custom-select" id="inputGroup10">
-                            <option selected>Choose...</option>
-                            <option value="1">One (Strongly Disagree)</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five (Strongly Disagree)</option>
+                        <H2> Question 8 </H2>
+                        You rarely get carried away by fantasies and ideas.
+                        <div class="dropdown w-25 p-3">
 
-                        </select>
-                    </div>
+                            <select class="custom-select" id="inputGroup08">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+                            </select>
+                        </div>
 
-                    <br>
-                    <button type="button" id="submit" class="btn btn-secondary">Find Friends</button>
+                        <H2> Question 9 </H2>
+                        You think that everyone’s views should be respected regardless of whether they are supported by
+                        facts or not.
+                        <div class="dropdown w-25 p-3">
+
+                            <select class="custom-select" id="inputGroup09">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+                            </select>
+                        </div>
+
+                        <H2> Question 10 </H2>
+                        You feel more energetic after spending time with a group of people.
+                        <div class="dropdown w-25 p-3">
+                            <select class="custom-select" id="inputGroup10">
+                                <option selected>Choose...</option>
+                                <option value="1">One (Strongly Disagree)</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five (Strongly Disagree)</option>
+
+                            </select>
+                        </div>
+
+                        <br>
+                        <button type="button" id="submit" class="btn btn-secondary mb-3">Find Friends</button>
+                </div>
             </div>
-        </div>
 
-    </div>
-    </div>
-    </div>
-    <div class="modal text-dark" id="myModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Your best friend match is: </h5>
+        </div>
+        <div class="modal text-dark" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Your best friend match is: </h5>
+
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
 
                 </div>
-                <div class="modal-body">
-
-                </div>
-
             </div>
         </div>
-    </div>
     </div>
     <script type="text/javascript">
         $("#submit").on("click", function (event) {
