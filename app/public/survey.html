@@ -27,18 +27,19 @@
 </head>
 
 <body class="text-light bg-primary">
-    <div class = "p-3 text-center">
-    <h1>Survey Questions</h1></div>
+    <div class="p-3 text-center">
+        <h1>Survey Questions</h1>
+    </div>
     <div class="bimage p-3">
         <div class="container bg-primary mt-3">
             <div class="row">
                 <div class="col-sm">
                     <h2>About You</h2>
                     <h4>Name (Required)<br>
-                        <input type="text" class="mb-2" id="name" value="name">
+                        <input type="text" class="mb-2" id="name">
                         <br>
                         Link to Photo Image (Required)<br>
-                        <input type="text" class=" w-50" id="photo" value="photo">
+                        <input type="text" class=" w-50" id="photo">
                         <br>
                         <hr>
                         <H2> Question 1 </H2>
@@ -46,7 +47,7 @@
                         <br>
                         <div class="dropdown w-25 p-3">
 
-                            <select class="custom-select" id="inputGroup01">
+                            <select class="custom-select" id="inputGroup1">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -60,7 +61,7 @@
                         <br>
                         <div class="dropdown w-25 p-3">
 
-                            <select class="custom-select" id="inputGroup02">
+                            <select class="custom-select" id="inputGroup2">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -74,7 +75,7 @@
                         <br>
                         <div class="dropdown w-25 p-3 ">
 
-                            <select class="custom-select" id="inputGroup03">
+                            <select class="custom-select" id="inputGroup3">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -87,7 +88,7 @@
                         You rarely do something just out of sheer curiosity.
                         <div class="dropdown w-25 p-3 ">
 
-                            <select class="custom-select" id="inputGroup04">
+                            <select class="custom-select" id="inputGroup4">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -101,7 +102,7 @@
                         <div class="dropdown w-25 p-3">
                             <div class="dropdown">
 
-                                <select class="custom-select" id="inputGroup05">
+                                <select class="custom-select" id="inputGroup5">
                                     <option selected>Choose...</option>
                                     <option value="1">One (Strongly Disagree)</option>
                                     <option value="2">Two</option>
@@ -115,7 +116,7 @@
                         It is often difficult for you to relate to other people’s feelings.
                         <div class="dropdown w-25 p-3">
 
-                            <select class="custom-select" id="inputGroup06">
+                            <select class="custom-select" id="inputGroup6">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -129,7 +130,7 @@
                         In a discussion, truth should be more important than people’s sensitivities.
                         <div class="dropdown w-25 p-3">
 
-                            <select class="custom-select" id="inputGroup07">
+                            <select class="custom-select" id="inputGroup7">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -143,7 +144,7 @@
                         You rarely get carried away by fantasies and ideas.
                         <div class="dropdown w-25 p-3">
 
-                            <select class="custom-select" id="inputGroup08">
+                            <select class="custom-select" id="inputGroup8">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -158,7 +159,7 @@
                         facts or not.
                         <div class="dropdown w-25 p-3">
 
-                            <select class="custom-select" id="inputGroup09">
+                            <select class="custom-select" id="inputGroup9">
                                 <option selected>Choose...</option>
                                 <option value="1">One (Strongly Disagree)</option>
                                 <option value="2">Two</option>
@@ -203,15 +204,34 @@
             </div>
         </div>
     </div>
+    <center>
+        <a href="/api/friends" class="text-white">API Friends List |</a>
+        <a href="https://github.com/killercodingmonkey/friend_finder" class="text-white">GitHub Repo</a>
+    </center>
     <script type="text/javascript">
+        
         $("#submit").on("click", function (event) {
+            var tempHold=[]
             event.preventDefault();
+            if($("#name").val().trim()===""){
+                alert("The name field cannot be empty")
+            }
+            else if($("#photo").val().trim()===""){
+                alert("The photo field cannot be empty")
+            }
+            for (let t = 1; t < 11; t++) {
+                if ($("#inputGroup"+t).val()==="Choose..."){
+                    alert("Every question must be answered")
+                }
+                
+                
+            }
             friends = {
                 "name": $("#name").val().trim(),
                 "photo": $("#photo").val().trim(),
                 "scores": [
-                    $("#inputGroup01").val(), $("#inputGroup02").val(), $("#inputGroup03").val(), $("#inputGroup04").val(), $("#inputGroup05").val(),
-                    $("#inputGroup06").val(), $("#inputGroup07").val(), $("#inputGroup08").val(), $("#inputGroup09").val(), $("#inputGroup10").val(),
+                    $("#inputGroup1").val(), $("#inputGroup2").val(), $("#inputGroup3").val(), $("#inputGroup4").val(), $("#inputGroup5").val(),
+                    $("#inputGroup6").val(), $("#inputGroup7").val(), $("#inputGroup8").val(), $("#inputGroup9").val(), $("#inputGroup10").val(),
                 ]
             }
             $.post("api/friends", friends)
